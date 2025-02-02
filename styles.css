@@ -1,0 +1,153 @@
+/* Base Styles */
+body {
+  background-color: var(--background);
+  color: var(--text-dark);
+  line-height: 1.7;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.schedule-section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: var(--text-light);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(236, 223, 41, 0.1);
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.schedule-item {
+  padding: 2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+  color: var(--text-light);
+  box-shadow: 0 4px 15px rgba(238, 223, 11, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(231, 245, 37, 0.3);
+}
+
+.tile {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 240, 240, 0.95);
+  border: 3px solid var(--primary-red);
+  border-radius: 12px;
+}
+
+.tile-content {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.image-section {
+  margin: 3rem 0;
+  padding: 3rem 2rem;
+  background: var(--dark-bg);
+  border: 2px solid var(--secondary-red);
+  border-radius: 15px;
+}
+
+.contact-box {
+  background: var(--primary-red);
+  border: 2px solid var(--accent-red);
+  margin-top: 2rem;
+  padding: 2.5rem;
+}
+
+/* Typography */
+h2, h3 {
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2.8rem;
+  color: var(--primary-red);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.image-section h3 {
+  color: var(--accent-red);
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 0.8rem 0;
+  font-weight: 500;
+}
+
+.schedule-item p,
+.contact-box p {
+  color: var(--text-light);
+  opacity: 0.95;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  
+  h2 {
+    font-size: 2.4rem;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+  }
+  
+  .schedule-item {
+    padding: 1.5rem;
+  }
+  
+  .image-section {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule-section {
+    margin: 1rem;
+    padding: 1.5rem 0.5rem;
+  }
+  
+  body {
+    font-size: 1.1rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.7rem;
+  }
+  
+  .tile-content {
+    padding: 2rem;
+  }
+}
